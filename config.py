@@ -55,6 +55,8 @@ BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
 # Enable - True or Disable - False
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "False")), False)
 
+# Toggle between forwarding vs. copying (with protect_content in genlink.py)
+FORWARD_MODE      = is_enabled(environ.get('FORWARD_MODE', "False"), False)
 
 # Verify Info :-
 VERIFY_MODE = bool(environ.get('VERIFY_MODE', False)) # Set True or False
